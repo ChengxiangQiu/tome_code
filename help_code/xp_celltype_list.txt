@@ -1,0 +1,60 @@
+chordal neural crest
+cranial neural crest
+neural crest
+neural plate anterior (fezf1+)
+neural plate anterior
+eye primordium
+optic neuron
+optic vesicle
+neuroectoderm
+early neuron
+Rohon-beard neuron
+placodal neuron
+neuron - ina
+neuroendocrine cell
+neural plate posterior (nkx2-1+)
+neural plate posterior
+hindbrain
+spinal cord
+chordal neural plate border
+notoplate
+ectoderm
+alpha ionocyte
+beta ionocyte
+ionocyte
+otic placode
+epibranchial and lateral line placode
+posterior placodal area
+placodal area
+adenohypophyseal placode
+anterior placodal area
+lens placode
+olfactory placode
+surface ectoderm
+epidermal
+small secretory cells
+goblet cell
+hatching gland
+cement gland primordium
+ciliated epidermal progenitor
+blastula
+germ cell
+gut
+endoderm
+tail bud
+notochord
+marginal zone
+presomitic mesoderm
+somite
+dorsal marginal zone
+pronephric mesenchyme
+intermediate mesoderm (ssg1+)
+intermediate mesoderm
+dorsal lateral plate region
+endothelial hemangioblast progenitor
+migrating myeloid progenitor
+involuted ventral mesoderm
+cardiac mesoderm
+lateral plate mesoderm
+ventral blood island
+blood

@@ -1,0 +1,96 @@
+Neural crest (PNS glia)	1
+Neural crest (PNS neurons)	1
+Olfactory sensory neurons	1
+Neural crest	1
+Mesencephalon/MHB	1
+Di/telencephalon	1
+Retinal neurons	1
+Retinal pigment cells	1
+Retinal primordium	1
+Forebrain/midbrain	1
+Noradrenergic neurons	1
+Motor neurons	1
+Intermediate progenitor cells	1
+Inhibitory interneurons	1
+Di/mesencephalon inhibitory neurons	1
+Spinal cord inhibitory neurons	1
+Di/mesencephalon excitatory neurons	1
+Spinal cord excitatory neurons	1
+Neuron progenitor cells	1
+Hindbrain	1
+Roof plate	1
+Anterior floor plate	1
+Posterior floor plate	1
+Spinal cord	1
+Spinal cord (dorsal)	1
+Spinal cord (ventral)	1
+Rostral neuroectoderm	1
+Epiblast	0
+Caudal neuroectoderm	1
+Neuromesodermal progenitors	1
+Caudal lateral epiblast	1
+Otic epithelium	2
+Olfactory epithelium	2
+Placodal area	2
+Branchial arch epithelium	2
+Fusing epithelium	2
+Apical ectodermal ridge	2
+Epidermis	2
+Pre-epidermal keratinocytes	2
+Surface ectoderm	2
+Primitive streak and adjacent ectoderm	0
+Primordial germ cells	0
+Foregut epithelium	3
+Midgut/Hindgut epithelium	3
+Lung epithelium	3
+Pancreatic epithelium	3
+Gut and lung epithelium	3
+Hepatocytes	3
+Gut	3
+Definitive endoderm	3
+Anterior primitive streak	0
+Notochord	4
+Osteoblast progenitors A	4
+Osteoblast progenitors B	4
+Myocytes	4
+Skeletal muscle progenitors	4
+Early chondrocytes	4
+Chondrocyte and osteoblast progenitors	4
+Paraxial mesoderm A	4
+Paraxial mesoderm B	4
+Paraxial mesoderm C	4
+Nascent mesoderm	4
+Intermediate mesoderm	4
+Renal epithelium	4
+Mesenchymal stromal cells	4
+Somatic mesoderm	4
+Connective tissue progenitors	4
+Limb mesenchyme progenitors	4
+Cardiomyocytes	4
+First heart field	4
+Second heart field	4
+Splanchnic mesoderm	4
+Amniochorionic mesoderm A	4
+Amniochorionic mesoderm B	4
+Amniochorionic mesoderm	4
+Extraembryonic mesoderm	4
+Allantois	4
+Mixed mesoderm	4
+Brain endothelium	4
+Liver endothelium	4
+Endothelium	4
+Hematoendothelial progenitors	4
+Blood progenitors	4
+White blood cells	4
+Megakaryocytes	4
+Primitive erythroid cells	4
+Definitive erythroid cells	4
+Embryonic visceral endoderm	5
+Extraembryonic visceral endoderm	5
+Visceral endoderm	5
+Parietal endoderm	5
+Hypoblast	5
+Inner cell mass	0
+Morula	0
+Trophectoderm	5
+Extraembryonic ectoderm	5

@@ -1,0 +1,63 @@
+xanthoblast
+melanoblast
+neural crest
+roofplate
+midbrain ventral
+midbrain
+diencephalon
+neural plate anterior
+telencephalon
+neural anterior
+optic primordium
+optic cup
+retina pigmented epithelium
+epiblast
+differentiating neurons (rohon beard)
+differentiating neurons
+differentiating neurons (dlx1a+)
+differentiating neurons (eomesa+)
+diencephalon (aplnr2+)
+floorplate
+hindbrain
+hindbrain dorsal
+hindbrain ventral
+neural plate posterior
+lens placode
+olfactory placode
+anterior neural ridge
+lateral line primordium
+otic placode
+epidermal (gbx2+)
+epidermal
+epidermal (foxi3a+)
+ionocyte
+apoptotic like
+germline
+DEL
+prechordal plate
+hatching gland
+dorsal margin involuted
+notochord
+margin
+tailbud spinal cord
+endoderm
+gut
+mesoderm adaxial cells
+non dorsal margin involuted
+tailbud mesoderm
+myotome
+pharyngeal arch
+mesoderm lateral plate (tbx1+)
+mesoderm lateral plate
+heart
+pectoral fin field
+macrophage
+endothelial
+pronephric duct
+mesoderm lateral plate (fli1a+)
+blood island
+erythroid
+blastomere
+forerunner cells
+EVL
+periderm
