@@ -31,10 +31,17 @@ The scripts under this section were used to identify core promoter cis-regulator
 Section 8: Comparison of the cellular trajectories of mouse, zebrafish and frog embryogenesis
 The scripts under this section were used to perform the "cross-species" comparison analysis, and make the plots showed in Fig. 6-7
 
-help_code: I posted all the relative codes or data profiles which are necessary in this folder, and I have indicated where to import them in individual script. For example, 
+help_code: I posted all the relative codes or data profiles which are necessary in this folder, and I have indicated where to import them in individual script. 
+
+For example, 
 Cao_NNLS_regression.R is used to perform the NNLS regression analysis as showed in Extended Data Fig. 10
+
 help_code.R includes some general function which was used in multiple scripts (simply used by source()).
+
 run_scrublet.py is used to perform the doublets removing step of section 1.
+
 Mus_musculus_TF.txt is the TF list of mouse (downloaded from http://bioinfo.life.hust.edu.cn/AnimalTFDB/) used in the section 6.
+
 Danio_rerio_TF.txt is the TF list of mouse (downloaded from http://bioinfo.life.hust.edu.cn/AnimalTFDB/) used in the section 8.
+
 Xenopus_tropicalis_TF.txt is the TF list of mouse (downloaded from http://bioinfo.life.hust.edu.cn/AnimalTFDB/) used in the section 8.
