@@ -39,11 +39,13 @@ if(ncol(emb) != 3){
     print(XXX)
 }
 
-anno1 = readRDS(paste0(work_path, "/obj_", time_i, "_anno.rds"))
+anno1 = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+anno1$Anno = as.vector(anno1$cell_state)
 anno1 = anno1[,c("day", "Anno")]
 anno1$day = "pre"
 anno1$stage = time_i
-anno2 = readRDS(paste0(work_path, "/obj_", time_j, "_anno.rds"))
+anno2 = readRDS(paste0(work_path, "/seurat_object_", time_j, ".rds"))
+anno2$Anno = as.vector(anno2$cell_state)
 anno2 = anno2[,c("day", "Anno")]
 anno2$day = "nex"
 anno2$stage = time_j

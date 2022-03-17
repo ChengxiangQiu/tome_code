@@ -79,9 +79,9 @@ rownames(mouse_gene) = as.vector(mouse_gene$gene_ID)
 #### E5.5 
 
 time_i = "E5.5" 
-obj = readRDS(paste0("obj_", time_i, "_exp.rds"))
-anno = readRDS(paste0("obj_", time_i, "_anno.rds"))
-anno = anno[colnames(obj),]
+obj = readRDS(paste0("seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
 anno$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
 Idents(obj) = as.vector(anno$celltype)
 
@@ -139,9 +139,9 @@ write.table(exp_mix, "E55_mix.txt", quote=F, sep="\t")
 #### E6.25
 
 time_i = "E6.25"
-obj = readRDS(paste0("obj_", time_i, "_exp.rds"))
-anno = readRDS(paste0("obj_", time_i, "_anno.rds"))
-anno = anno[colnames(obj),]
+obj = readRDS(paste0("seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
 anno$group = anno$embryo
 anno$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
 Idents(obj) = as.vector(anno$celltype)
@@ -193,9 +193,9 @@ write.table(exp_mix, "E60_mix.txt", quote=F, sep="\t")
 #### E6.5
 
 time_i = "E6.5"
-obj = readRDS(paste0("obj_", time_i, "_exp.rds"))
-anno = readRDS(paste0("obj_", time_i, "_anno.rds"))
-anno = anno[colnames(obj),]
+obj = readRDS(paste0("seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
 anno$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
 Idents(obj) = as.vector(anno$celltype)
 
@@ -250,9 +250,9 @@ write.table(exp_mix, "E65_mix.txt", quote=F, sep="\t")
 #### E7
 
 time_i = "E7"
-obj = readRDS(paste0("obj_", time_i, "_exp.rds"))
-anno = readRDS(paste0("obj_", time_i, "_anno.rds"))
-anno = anno[colnames(obj),]
+obj = readRDS(paste0("seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
 anno$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
 Idents(obj) = as.vector(anno$celltype)
 
@@ -304,9 +304,9 @@ write.table(exp_mix, "E70_mix.txt", quote=F, sep="\t")
 #### E7.5
 
 time_i = "E7.5"
-obj = readRDS(paste0("obj_", time_i, "_exp.rds"))
-anno = readRDS(paste0("obj_", time_i, "_anno.rds"))
-anno = anno[colnames(obj),]
+obj = readRDS(paste0("seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
 anno$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
 Idents(obj) = as.vector(anno$celltype)
 

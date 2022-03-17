@@ -22,16 +22,16 @@ cell_num = NULL
 
 ### Of note, here we used the gene list by intersecting the Pijuan-Sala's and Beth/Jun's data
 
-obj_1 = readRDS(paste0(path, "/obj_", "E8.5a", "_exp.rds"))
-obj_2 = readRDS(paste0(path, "/obj_", "E8.5b", "_exp.rds"))
+obj_1 = readRDS(paste0(path, "/seurat_object_", "E8.5a", ".rds"))
+obj_2 = readRDS(paste0(path, "/seurat_object_", "E8.5b", ".rds"))
 gene = intersect(rownames(obj_1), rownames(obj_2))
 
 for(time_i in 1:length(time_point)){
   
   print(time_i)
   
-  obj = readRDS(paste0(path, "/obj_", time_point[time_i], "_exp.rds"))
-  anno = readRDS(paste0(path, "/obj_", time_point[time_i], "_anno.rds"))
+  obj = readRDS(paste0(path, "/seurat_object_", time_point[time_i], ".rds"))
+  anno = readRDS(paste0(path, "/seurat_object_", time_point[time_i], ".rds"))
   
   if(time_point[time_i] == "E8.5b"){
     anno$project = "dat_354"
@@ -108,7 +108,7 @@ for(time_i in 1:length(time_point)){
   
   print(time_i)
   
-  anno = readRDS(paste0(path, "/anno/obj_", time_point[time_i], "_anno.rds"))
+  anno = readRDS(paste0(path, "/seurat_object_", time_point[time_i], ".rds"))
   count_sub = count_all[,rownames(anno)]
   obj = CreateSeuratObject(counts = count_sub, min.cells = 0, min.features = 0, meta.data = anno)
 
@@ -174,7 +174,7 @@ for(time_i in 1:length(time_point)){
   
   print(time_i)
   
-  anno = readRDS(paste0(path, "/anno/obj_", time_point[time_i], "_anno.rds"))
+  anno = readRDS(paste0(path, "/seurat_object_", time_point[time_i], ".rds"))
   count_sub = count_all[,rownames(anno)]
   obj = CreateSeuratObject(counts = count_sub, min.cells = 0, min.features = 0, meta.data = anno)
   

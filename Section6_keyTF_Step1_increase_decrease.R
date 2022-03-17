@@ -33,9 +33,9 @@ edge = edge[!edge$nex %in% c("E5.25:Extraembryonic ectoderm","E7:Parietal endode
 getKeyTF <- function(time_i, t1 = 0.7, t2 = 0.3, t3 = 0.3){
   
   
-  obj_pre = readRDS(paste0(path, "/obj_", time_point[time_i], "_exp.rds"))
-  anno_pre = readRDS(paste0(path, "/obj_", time_point[time_i], "_anno.rds"))
-  anno_pre = anno_pre[colnames(obj_pre),]
+  obj_pre = readRDS(paste0(path, "/seurat_object_", time_point[time_i], ".rds"))
+  anno_pre = data.frame(obj_pre[[]])
+  anno_pre$Anno = as.vector(anno_pre$cell_state)
   obj_pre$Anno = as.vector(anno_pre$Anno)
   Idents(obj_pre) = as.vector(anno_pre$Anno)
   
@@ -44,8 +44,8 @@ getKeyTF <- function(time_i, t1 = 0.7, t2 = 0.3, t3 = 0.3){
   exp_pre@x <- log(exp_pre@x + 1)
   
   obj_nex = readRDS(paste0(path, "/revision/exp/obj_", time_point[time_i+1], "_exp.rds"))
-  anno_nex = readRDS(paste0(path, "/revision/anno/obj_", time_point[time_i+1], "_anno.rds"))
-  anno_nex = anno_nex[colnames(obj_nex),]
+  anno_nex = data.frame(obj_nex[[]])
+  anno_nex$Anno = as.vector(anno_nex$cell_state)
   obj_nex$Anno = as.vector(anno_nex$Anno)
   Idents(obj_nex) = as.vector(anno_nex$Anno)
   
@@ -129,8 +129,8 @@ getKeyTF <- function(time_i, t1 = 0.7, t2 = 0.3, t3 = 0.3){
   
   
   obj_pre = readRDS(paste0(path, "/revision/exp/obj_", time_point[time_i], "_exp.rds"))
-  anno_pre = readRDS(paste0(path, "/revision/anno/obj_", time_point[time_i], "_anno.rds"))
-  anno_pre = anno_pre[colnames(obj_pre),]
+  anno_pre = data.frame(obj_pre[[]])
+  anno_pre$Anno = as.vector(anno_pre$cell_state)
   obj_pre$Anno = as.vector(anno_pre$Anno)
   Idents(obj_pre) = as.vector(anno_pre$Anno)
   
@@ -139,8 +139,8 @@ getKeyTF <- function(time_i, t1 = 0.7, t2 = 0.3, t3 = 0.3){
   exp_pre@x <- log(exp_pre@x + 1)
   
   obj_nex = readRDS(paste0(path, "/revision/exp/obj_", time_point[time_i+1], "_exp.rds"))
-  anno_nex = readRDS(paste0(path, "/revision/anno/obj_", time_point[time_i+1], "_anno.rds"))
-  anno_nex = anno_nex[colnames(obj_nex),]
+  anno_nex = data.frame(obj_nex[[]])
+  anno_nex$Anno = as.vector(anno_nex$cell_state)
   obj_nex$Anno = as.vector(anno_nex$Anno)
   Idents(obj_nex) = as.vector(anno_nex$Anno)
   

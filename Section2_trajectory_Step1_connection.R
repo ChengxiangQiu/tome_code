@@ -17,6 +17,8 @@
 #### Reference: https://satijalab.org/seurat/archive/v3.0/integration.html
 #### under "Standard Workflow", and "Reciprocal PCA" panels
 
+### seurat_object_XXX.rds could be downloaded from https://tome.gs.washington.edu/
+
 library(Seurat)
 library(future)
 library(future.apply)
@@ -37,10 +39,10 @@ print(time_2)
 
 ### adding both time and batch (if necessary) information
 
-obj_1 = readRDS(paste0(work_path, "/obj_", time_1, "_exp.rds"))
+obj_1 = readRDS(paste0(work_path, "/seurat_object_", time_1, ".rds"))
 obj_1$group = paste0(time_1, "_", obj_1$group)
 
-obj_2 = readRDS(paste0(work_path, "/obj_", time_2, "_exp.rds"))
+obj_2 = readRDS(paste0(work_path, "/seurat_object_", time_2, ".rds"))
 obj_2$group = paste0(time_2, "_", obj_1$group)
 
 obj = merge(obj_1, obj_2)
@@ -104,11 +106,13 @@ print(time_j)
 emb = readRDS(paste0(work_path, "/", time_i, "_", time_j, "_umap3.rds"))
 emb = data.frame(emb)
 
-anno1 = readRDS(paste0(work_path, "/obj_", time_i, "_anno.rds"))
+anno1 = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+anno1$Anno = as.vector(anno1$cell_state)
 anno1 = anno1[,c("day", "Anno")]
 anno1$day = "pre"
 anno1$stage = time_i
-anno2 = readRDS(paste0(work_path, "/obj_", time_j, "_anno.rds"))
+anno2 = readRDS(paste0(work_path, "/seurat_object_", time_j, ".rds"))
+anno2$Anno = as.vector(anno2$cell_state)
 anno2 = anno2[,c("day", "Anno")]
 anno2$day = "nex"
 anno2$stage = time_j
@@ -157,11 +161,13 @@ obj = readRDS(paste0(work_path, "/", time_i, "_", time_j, ".rds"))
 emb = data.frame(Embeddings(obj, reduction = "pca"))
 print(dim(emb))
 
-anno1 = readRDS(paste0(work_path, "/obj_", time_i, "_anno.rds"))
+anno1 = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+anno1$Anno = as.vector(anno1$cell_state)
 anno1 = anno1[,c("day", "Anno")]
 anno1$day = "pre"
 anno1$stage = time_i
-anno2 = readRDS(paste0(work_path, "/obj_", time_j, "_anno.rds"))
+anno2 = readRDS(paste0(work_path, "/seurat_object_", time_j, ".rds"))
+anno2$Anno = as.vector(anno2$cell_state)
 anno2 = anno2[,c("day", "Anno")]
 anno2$day = "nex"
 anno2$stage = time_j

@@ -18,7 +18,7 @@ work_path = ""
 time_point = paste0("E", seq(9.5, 13.5, 1))
 
 cnt = 1; time_i = time_point[cnt]
-obj = readRDS(paste0(work_path, "/obj_", time_i, "_exp.rds"))
+obj = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
 gene = rownames(obj)
 
 pd_all = NULL
@@ -29,7 +29,8 @@ for(cnt in 1:5){
     print(time_i)
     
     pd = readRDS(paste0(orig_data_path, "/", time_i, "_pd.rds"))
-    anno = readRDS(paste0(work_path, "/revision/anno/obj_", time_i, "_anno.rds"))
+    anno = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+    anno$celltype = as.vector(anno$cell_type)
     tmp = anno %>%
         select(sample, celltype) %>%
         left_join(pd %>% select(sample, embryo_id, embryo_sex), by = "sample")
@@ -41,7 +42,7 @@ for(cnt in 1:5){
     tmp$day = time_i
     pd_all = rbind(pd_all, tmp)
     
-    obj = readRDS(paste0(work_path, "/obj_", time_i, "_exp.rds"))
+    obj = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
     xx = GetAssayData(object = obj, slot = "counts")
     xx = xx[,rownames(tmp)]
     if(sum(rownames(obj) != gene) == 0){
@@ -61,7 +62,7 @@ saveRDS(pd_all, paste0(work_path, "/pd_4.rds"))
 library(Seurat)
 work_path = ""
 time_point = paste0("E", c(seq(6.5, 8.25, 0.25), "8.5a"))
-gene_list = rownames(readRDS(paste0(work_path, "/obj_", time_point[2], "_exp.rds")))
+gene_list = rownames(readRDS(paste0(work_path, "/seurat_object_", time_point[2], ".rds")))
 
 exp <- NULL
 pd <- NULL
@@ -70,8 +71,9 @@ for(i in 1:length(time_point)){
     time_i = time_point[i]
     print(time_i)
     
-    obj = readRDS(paste0(work_path, "/obj_", time_i, "_exp.rds"))
-    anno = readRDS(paste0(work_path, "/obj_", time_i, "_anno.rds"))
+    obj = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+    anno = data.frame(obj[[]])
+    anno$Anno = as.vector(anno$cell_state)
     anno = anno[colnames(obj),]
     anno$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
     obj$embryo = as.vector(paste0("pijuan_", obj$embryo))
@@ -108,7 +110,10 @@ work_path = ""
 dat = readRDS(paste0(orig_data_path, "/dat.rds"))
 gene_count = dat$gene_count
 
-anno = readRDS(pasteo(work_path, "/obj_E8.5b_anno.rds"))
+time_i = "E8.5b"
+obj = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
 gene_count = gene_count[,rownames(anno)]
 anno = anno %>%
     left_join(embryo_sex %>% select(RT_group, embryo_id, embryo_sex), by = "RT_group")
@@ -122,8 +127,11 @@ saveRDS(anno, paste0(work_path, "/pd_3.rds"))
 
 #### E6.25:Epiblast, including 4 samples
 
-obj = readRDS(paste0(work_path, "/obj_E6.25_exp.rds"))
-anno = readRDS(paste0(work_path, "/obj_E6.25_anno.rds"))
+time_i = "E6.25"
+obj = readRDS(paste0(work_path, "/seurat_object_", time_i, ".rds"))
+anno = data.frame(obj[[]])
+anno$Anno = as.vector(anno$cell_state)
+anno = anno[colnames(obj),]
 obj$celltype = unlist(lapply(as.vector(anno$Anno), function(x) strsplit(x,"[:]")[[1]][2]))
 obj$embryo_id = paste0("cheng_", obj$embryo)
 obj$embryo_sex = NA
