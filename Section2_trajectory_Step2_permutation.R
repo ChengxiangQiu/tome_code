@@ -125,7 +125,7 @@ for(cnt in 1:(length(time_point)-1)){
     y = NULL
     
     for(i in 1:permutation_times){
-        y = c(y, as.vector(as.matrix(dat[[1]])))
+        y = c(y, as.vector(as.matrix(dat[[i]])))
     }
     
     x[[cnt]] = y
