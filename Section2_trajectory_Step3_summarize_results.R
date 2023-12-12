@@ -136,6 +136,9 @@ tree = tree[,c("pre","nex")]
 write.table(res, paste0(work_path, "/edge_prob.txt"), row.names = F, col.names = F, quote = F, sep = "\t")
 write.table(tree, paste0(work_path, "/mouse_edge.txt"), row.names = F, col.names = F, quote = F, sep = "\t")
 
+#################################################################################
+### To generate the "roadmap" illustration depicted in Fig. 2, navigate to the help_code folder, where you'll find a file named "map.html." Inside this file, locate line 36, which houses the lineage information of cell states. This information is generated using the create_map.py script, also found in the help_code folder.
+
 #### create heatmap of each pair of adjacent stages
 
 dat = readRDS(paste0(work_path, "/edge_all.rds"))
