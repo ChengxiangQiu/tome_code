@@ -2,9 +2,10 @@
 #### Section3_RNA_velocity ####
 ###############################
 
-#### Because of the data size limitation, we don't provide the download links for 
-#### those exon/intron data for individual cell states, but please feel free to 
-#### email Chengxiang Qiu (cxqiu@uw.edu) if you want to access them for RNA-velocity analysis.
+#### Please email Chengxiang Qiu (cxqiu@uw.edu) if you have any questions.
+
+#### All the data used for performing RNA-velocity analysis can be found from the below link, with exon/intron read counts.
+#### https://shendure-web.gs.washington.edu/content/members/cxqiu/public/nobackup/tome_summary_data/velocity/
 
 #### The Python scripts of performing RNA-volicty analysis can be found in the
 #### help_code folder
